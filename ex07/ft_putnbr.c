@@ -22,14 +22,14 @@ void	ft_putnbr(int nb)
 		printchar('2');
 		nb = 147483648;
 	}
-	if (nb > 9)
-		ft_putnbr(nb / 10);
-	else if (nb < 0)
+	if (nb < 0)
 	{
 		nb = nb * (-1);
 		write(1, "-", 1);
 		ft_putnbr(nb / 10);
 	}
+	if (nb > 9)
+		ft_putnbr(nb / 10);
 	printchar(nb % 10 + '0');
 }
 
